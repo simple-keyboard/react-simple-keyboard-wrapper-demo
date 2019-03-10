@@ -40,7 +40,7 @@ class App extends Component {
         input: input
       },
       () => {
-        this.keyboardWrapper.setInput(input);
+        this.keyboardWrapper.keyboardRef.keyboard.setInput(input);
       }
     );
   };
