@@ -1,6 +1,3 @@
-/**
- * 3/7/2019 Outdated. Please wait for update on 3/8/2019
- */
 import React, { Component } from "react";
 import { render } from "react-dom";
 import KeyboardWrapper from "./KeyboardWrapper.js";
