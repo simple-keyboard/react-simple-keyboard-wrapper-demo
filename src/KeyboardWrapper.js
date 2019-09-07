@@ -11,7 +11,7 @@ class KeyboardWrapper extends Component {
   }
 
   render() {
-    return <Keyboard ref={r => (this.keyboardRef = r)} {...this.props} />;
+    return <Keyboard keyboardRef={r => (this.keyboard = r)} {...this.props} />;
   }
 }
 
