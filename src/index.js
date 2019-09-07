@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import KeyboardWrapper from "./KeyboardWrapper.js";
+import Keyboard from "react-simple-keyboard";
+import "react-simple-keyboard/build/css/index.css";
 import "./index.css";
 
 class App extends Component {
@@ -40,7 +41,7 @@ class App extends Component {
         input: input
       },
       () => {
-        this.keyboardWrapper.keyboard.setInput(input);
+        this.keyboard.setInput(input);
       }
     );
   };
@@ -53,8 +54,8 @@ class App extends Component {
           placeholder={"Tap on the virtual keyboard to start"}
           onChange={e => this.onChangeInput(e)}
         />
-        <KeyboardWrapper
-          ref={r => (this.keyboardWrapper = r)}
+        <Keyboard
+          keyboardRef={r => (this.keyboard = r)}
           physicalKeyboardHighlight={true}
           layoutName={this.state.layoutName}
           onChange={input => this.onChange(input)}
